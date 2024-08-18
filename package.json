@@ -1,0 +1,43 @@
+{
+  "name": "ts-editor",
+  "friendlyName": "ts-editor",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "@datagrok-libraries/utils": "latest",
+    "cash-dom": "latest",
+    "css-loader": "^7.1.2",
+    "datagrok-api": "^1.20.1",
+    "dayjs": "latest",
+    "lodash.get": "^4.4.2",
+    "monaco-editor": "^0.50.0",
+    "style-loader": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "worker-loader": "^3.0.8"
+  },
+  "devDependencies": {
+    "datagrok-tools": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  },
+  "scripts": {
+    "link-all": "",
+    "debug-ts-editor": "npm run build && grok publish",
+    "release-ts-editor": "npm run build && grok publish --release",
+    "bundle-packages": "node --loader ts-node/esm ./bundle-virtual-project.mts",
+    "build-ts-editor": "npm run build",
+    "build": "npm run bundle-packages && webpack",
+    "debug-ts-editor-public": "npm run build && grok publish public",
+    "release-ts-editor-public": "npm run build && grok publish public --release",
+    "debug-ts-editor-local": "npm run build && grok publish local",
+    "release-ts-editor-local": "npm run build && grok publish local --release"
+  },
+  "canEdit": [
+    "Developers"
+  ],
+  "canView": [
+    "All users"
+  ]
+}
